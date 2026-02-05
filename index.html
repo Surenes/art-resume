@@ -3,218 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Art Portillo - Resume</title>
+    <title>Jan Art Portillo | Operations & Automation Specialist</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --bg-color: #f4f7f6;
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--text);
+            background-color: var(--light);
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
-        .resume-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 40px 30px;
-        }
-
-        .sidebar h2 {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            margin-top: 30px;
-        }
-
-        .contact-info p {
-            font-size: 0.9rem;
-            margin: 10px 0;
-            word-wrap: break-word;
-        }
-
-        ul.skills-list, ul.lang-list {
-            padding-left: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            padding: 40px;
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
         header {
-            margin-bottom: 40px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        header h1 {
+        h1 {
             margin: 0;
+            color: var(--dark);
             font-size: 2.5rem;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: -0.025em;
         }
 
-        header .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            font-weight: bold;
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
         }
 
-        section {
-            margin-bottom: 30px;
+        .contact-bar {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
-        h3 {
-            color: var(--secondary-color);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            text-transform: uppercase;
+        section { margin-bottom: 2.5rem; }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .job-title {
-            font-weight: bold;
+        .experience-item { margin-bottom: 1.5rem; }
+
+        .job-meta {
             display: flex;
             justify-content: space-between;
-            margin-top: 15px;
+            font-weight: bold;
+            color: var(--dark);
         }
 
-        .date-range {
-            color: #7f8c8d;
-            font-style: italic;
-        }
-
-        .reference-grid {
+        .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            font-size: 0.9rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
         }
 
-        @media (max-width: 768px) {
-            .resume-container {
-                grid-template-columns: 1fr;
-            }
+        .skill-card {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        ul { padding-left: 1.2rem; }
+        
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; margin: 1rem; }
+            h1 { font-size: 2rem; }
+            .job-meta { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-<div class="resume-container">
-    <aside class="sidebar">
-        <div class="contact-info">
-            <h2>Contact</h2>
-            [cite_start]<p>📞 09126313690 [cite: 5]</p>
-            [cite_start]<p>📧 janart0117@gmail.com [cite: 6]</p>
+<div class="container">
+    <header>
+        <h1>Jan Art Portillo</h1>
+        <div class="tagline">Operations Consultant & Automation Specialist</div>
+        <div class="contact-bar">
+            <span>📍 Ormoc City</span>
+            [cite_start]<span>📞 09126313690 [cite: 5]</span>
+            [cite_start]<span>✉️ janart0117@gmail.com [cite: 6]</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Profile</h2>
+        <p>
+            [cite_start]Adaptive Operations Consultant with 5 years of experience specializing in Billing and Inventory Control[cite: 23]. 
+            [cite_start]Expert in bridging administrative precision and technical innovation by building custom Python applications to automate manual workflows[cite: 24].
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <strong>Automation</strong>
+                [cite_start]<p>Python App Development for task automation[cite: 17].</p>
+            </div>
+            <div class="skill-card">
+                <strong>Data Analysis</strong>
+                [cite_start]<p>Advanced MS Excel and complex dataset analysis[cite: 14, 15].</p>
+            </div>
+            <div class="skill-card">
+                <strong>Systems</strong>
+                [cite_start]<p>Inventory tracking system design and implementation[cite: 16].</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-meta">
+                <span>Operations & Automation Consultant</span>
+                [cite_start]<span>2021 – Present [cite: 27, 40]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Facilitate client information gathering for corporate minutes and capital improvement[cite: 28].</li>
+                [cite_start]<li>Develop Python-based automation tools to reduce manual entry[cite: 29].</li>
+                [cite_start]<li>Consult on process improvements to streamline document workflows[cite: 30].</li>
+            </ul>
         </div>
 
+        <div class="experience-item">
+            <div class="job-meta">
+                <span>Billing & Inventory Control Specialist</span>
+                [cite_start]<span>2016 – 2021 [cite: 31, 42]</span>
+            </div>
+            <ul>
+                [cite_start]<li>Handled high-volume billing and sensitive financial information[cite: 32].</li>
+                [cite_start]<li>Designed customized inventory tracking systems to optimize control procedures[cite: 33].</li>
+                [cite_start]<li>Analyzed raw material levels to prevent operational delays[cite: 34].</li>
+                [cite_start]<li>Created comprehensive reports for stock levels and adjustments[cite: 35].</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
         <h2>Education</h2>
-        <div class="education-item">
-            [cite_start]<p><strong>Associate in Computer Technology</strong> [cite: 8]<br>
-            [cite_start]STI College Ormoc [cite: 9]<br>
-            [cite_start]2013-2015 [cite: 9]</p>
-            
-            [cite_start]<p><strong>High School</strong> [cite: 10]<br>
-            [cite_start]New Ormoc City National High School [cite: 11]<br>
-            [cite_start]2009-2013 [cite: 12]</p>
-        </div>
+        [cite_start]<p><strong>Associate in Computer Technology</strong> [cite: 8]<br>
+        [cite_start]STI College Ormoc (2013-2015) [cite: 9]</p>
+    </section>
 
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-            [cite_start]<li>Data Analysis: MS Excel [cite: 14, 15]</li>
-            [cite_start]<li>Python Automation [cite: 17]</li>
-            [cite_start]<li>Inventory System Design [cite: 16]</li>
-            [cite_start]<li>MS Office Suite [cite: 16]</li>
-            [cite_start]<li>Basic Photoshop [cite: 16]</li>
-        </ul>
-
+    <section>
         <h2>Languages</h2>
-        <ul class="lang-list">
-            [cite_start]<li>English [cite: 19]</li>
-            [cite_start]<li>Cebuano [cite: 20]</li>
-            [cite_start]<li>Tagalog [cite: 21]</li>
-        </ul>
-    </aside>
-
-    <main class="main-content">
-        <header>
-            [cite_start]<h1>Jan Art Portillo</h1> [cite: 1]
-            [cite_start]<div class="subtitle">Operations Consultant & Automation Specialist</div> [cite: 2, 3]
-        </header>
-
-        <section>
-            <h3>Profile</h3>
-            <p>
-                [cite_start]Adaptive Operations Consultant with 5 years of experience specializing in Billing and Inventory Control[cite: 23]. 
-                Expert in bridging administrative precision with technical innovation through Python automation and 
-                [cite_start]data-driven system optimization[cite: 24, 25].
-            </p>
-        </section>
-
-        <section>
-            <h3>Professional Experience</h3>
-            
-            <div class="experience-item">
-                <div class="job-title">
-                    [cite_start]<span>Operations & Automation Consultant</span> [cite: 27]
-                    [cite_start]<span class="date-range">2021 – Present</span> [cite: 40]
-                </div>
-                <ul>
-                    [cite_start]<li>Facilitate client information gathering for corporate minutes and capital improvements[cite: 28].</li>
-                    [cite_start]<li>Develop Python-based automation tools to reduce manual entry and improve data accuracy[cite: 29].</li>
-                    [cite_start]<li>Consult on process improvements to streamline document workflows and reporting[cite: 30].</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-title">
-                    [cite_start]<span>Billing & Inventory Control Specialist</span> [cite: 31]
-                    [cite_start]<span class="date-range">2016 – 2021</span> [cite: 42]
-                </div>
-                <ul>
-                    [cite_start]<li>Handled high-volume billing and sensitive financial information[cite: 32].</li>
-                    [cite_start]<li>Designed and implemented customized inventory tracking systems[cite: 33].</li>
-                    [cite_start]<li>Analyzed raw material levels and supply chains to prevent operational delays[cite: 34].</li>
-                    [cite_start]<li>Created comprehensive reports for stock levels and inventory adjustments[cite: 35].</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h3>References</h3>
-            <div class="reference-grid">
-                <div>
-                    [cite_start]<strong>Alfe Bancoro</strong> [cite: 37]<br>
-                    [cite_start]EDC-Plant Operation Engineer [cite: 38]<br>
-                    [cite_start]Phone: 09277510811 [cite: 39]
-                </div>
-                <div>
-                    [cite_start]<strong>Cybele T. Nodalo</strong> [cite: 41]<br>
-                    [cite_start]STI College Instructor [cite: 43]<br>
-                    [cite_start]Phone: 09190689429 [cite: 44]
-                </div>
-            </div>
-        </section>
-    </main>
+        [cite_start]<p>English, Cebuano, and Tagalog [cite: 19, 20, 21]</p>
+    </section>
 </div>
 
 </body>
