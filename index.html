@@ -3,188 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Art Portillo | Online Bio</title>
+    <title>Jan Art Portillo | Operations & Automation Specialist</title>
     <style>
         :root {
-            --primary-blue: #0070f3;
-            --text-dark: #1a1a1a;
-            --text-muted: #666;
-            --bg-gray: #f9f9f9;
+            --primary: #2563eb;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --accent-bg: #f8fafc;
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: var(--text-main);
+            background-color: var(--bg);
             margin: 0;
-            padding: 20px;
-            background-color: #fff;
+            padding: 0;
         }
 
-        .bio-container {
-            max-width: 650px;
-            margin: 40px auto;
+        .container {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .profile-wrapper {
             text-align: center;
+            margin-bottom: 25px;
         }
 
-        /* Profile Picture Placeholder */
-        .profile-pic-container {
+        .profile-circle {
             width: 150px;
             height: 150px;
-            margin: 0 auto 25px;
             border-radius: 50%;
-            background-color: var(--bg-gray);
-            border: 2px dashed #ccc; /* Dashed line indicates a placeholder */
+            background-color: var(--accent-bg);
+            border: 2px dashed #cbd5e1;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
-        .profile-pic-container img {
+        .profile-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: none; /* Hidden until you add a source */
+            display: none;
         }
 
-        .placeholder-text {
-            color: #999;
-            font-size: 0.8rem;
-            padding: 10px;
-        }
-
-        header h1 {
-            font-size: 2.2rem;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-
-        .tagline {
-            color: var(--primary-blue);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-info {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+        header {
+            text-align: center;
             margin-bottom: 40px;
         }
 
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .contact-row {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
         section {
-            text-align: left;
             margin-bottom: 40px;
         }
 
         h2 {
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
 
-        .exp-row {
+        .item-block {
+            margin-bottom: 30px;
+        }
+
+        .title-row {
             display: flex;
             justify-content: space-between;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        .date {
+        .date-label {
             font-weight: 400;
-            color: var(--text-muted);
             font-size: 0.85rem;
+            color: var(--text-light);
         }
 
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            list-style: none;
-            padding: 0;
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
         }
 
-        .skill-tag {
-            background: var(--bg-gray);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            border: 1px solid #eee;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
-        @media (max-width: 480px) {
-            .exp-row { flex-direction: column; }
+        .skill-category strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .reference-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .ref-card {
+            background: var(--accent-bg);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .title-row, .reference-grid { flex-direction: column; grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<div class="bio-container">
-    <div class="profile-pic-container">
-        <img src="your-photo.jpg" alt="Jan Art Portillo" id="profileImg" onerror="this.style.display='none'">
-        <span class="placeholder-text">Photo Placeholder</span>
+<div class="container">
+    <div class="profile-wrapper">
+        <div class="profile-circle">
+            <img src="profile-photo.jpg" alt="Jan Art Portillo" id="profilePic" onerror="this.style.display='none'">
+            <span style="color: #94a3b8; font-size: 0.8rem;">Photo Placeholder</span>
+        </div>
     </div>
 
     <header>
-        [cite_start]<h1>Jan Art Portillo [cite: 1]</h1>
-        [cite_start]<div class="tagline">Operations Consultant & Automation Specialist [cite: 2, 3]</div>
-        <div class="contact-info">
-            [cite_start]janart0117@gmail.com [cite: 6] [cite_start]• 09126313690 [cite: 5]
+        <h1>Jan Art Portillo</h1>
+        <div class="subtitle">Operations Consultant & Automation Specialist</div>
+        <div class="contact-row">
+            09126313690 | janart0117@gmail.com
         </div>
     </header>
 
     <section>
         <h2>Profile</h2>
         <p>
-            [cite_start]Adaptive Operations Consultant with 5 years of experience specializing in Billing and Inventory Control[cite: 23]. 
-            [cite_start]I bridge the gap between administrative precision and technical innovation by building custom Python applications to automate manual workflows[cite: 24].
+            Adaptive Operations Consultant with 5 years of experience specializing in Billing and Inventory Control. 
+            I bridge the gap between administrative precision and technical innovation by gathering critical client data and building custom Python applications to automate manual workflows.
         </p>
     </section>
 
     <section>
-        <h2>Experience</h2>
-        <div style="margin-bottom: 20px;">
-            <div class="exp-row">
-                [cite_start]<span>Operations & Automation Consultant [cite: 27]</span>
-                [cite_start]<span class="date">2021 – Present [cite: 40]</span>
+        <h2>Professional Experience</h2>
+        <div class="item-block">
+            <div class="title-row">
+                <span>Operations & Automation Consultant</span>
+                <span class="date-label">2021 – Present</span>
             </div>
-            <ul style="margin-top: 5px; color: var(--text-muted);">
-                [cite_start]<li>Develop Python-based automation tools to reduce manual entry[cite: 29].</li>
-                [cite_start]<li>Facilitate client data gathering for corporate minutes and capital improvements[cite: 28].</li>
+            <ul>
+                <li>Develop Python-based automation tools to reduce manual entry and improve data accuracy.</li>
+                <li>Facilitate client information gathering for corporate minutes and capital improvement documentation.</li>
+                <li>Consult on process improvements to streamline document workflows.</li>
             </ul>
         </div>
 
-        <div>
-            <div class="exp-row">
-                [cite_start]<span>Billing & Inventory Control Specialist [cite: 31]</span>
-                [cite_start]<span class="date">2016 – 2021 [cite: 42]</span>
+        <div class="item-block">
+            <div class="title-row">
+                <span>Billing & Inventory Control Specialist</span>
+                <span class="date-label">2016 – 2021</span>
             </div>
-            <ul style="margin-top: 5px; color: var(--text-muted);">
-                [cite_start]<li>Designed customized inventory tracking systems to optimize control[cite: 33].</li>
-                [cite_start]<li>Handled high-volume billing and sensitive financial information[cite: 32].</li>
+            <ul>
+                <li>Handled high-volume billing and processed sensitive financial information.</li>
+                <li>Designed and implemented customized inventory tracking systems to optimize control procedures.</li>
+                <li>Analyzed raw material levels and supply chains to prevent operational delays.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Technical Skills</h2>
-        <div class="skill-list">
-            [cite_start]<span class="skill-tag">Python Automation [cite: 17]</span>
-            [cite_start]<span class="skill-tag">Advanced MS Excel [cite: 15]</span>
-            [cite_start]<span class="skill-tag">Data Analysis [cite: 14]</span>
-            [cite_start]<span class="skill-tag">Inventory System Design [cite: 16]</span>
-            [cite_start]<span class="skill-tag">Basic Photoshop [cite: 16]</span>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Automation</strong> Python (App Development for task automation).
+            </div>
+            <div class="skill-category">
+                <strong>Data Analysis</strong> Advanced MS Excel, gathering and analyzing complex datasets.
+            </div>
+            <div class="skill-category">
+                <strong>Systems</strong> Inventory tracking system design and implementation.
+            </div>
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="exp-row">
-            [cite_start]<span>Associate in Computer Technology [cite: 8]</span>
-            [cite_start]<span class="date">STI College Ormoc [cite: 9]</span>
+        <p><strong>Associate in Computer Technology</strong><br>STI College Ormoc (2013-2015)</p>
+        <p><strong>High School</strong><br>New Ormoc City National High School (2009-2013)</p>
+    </section>
+
+    <section>
+        <h2>References</h2>
+        <div class="reference-grid">
+            <div class="ref-card">
+                <strong>Alfe Bancoro</strong><br>
+                EDC-Plant Operation Engineer<br>
+                Phone: 09277510811
+            </div>
+            <div class="ref-card">
+                <strong>Cybele T. Nodalo</strong><br>
+                STI College Instructor<br>
+                Phone: 09190689429
+            </div>
         </div>
     </section>
 </div>
